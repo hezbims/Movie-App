@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_very_small">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/video_thumbnail"
+                    android:layout_width="142.4dp"
+                    android:layout_height="80dp"
+                    tools:src="@drawable/video_thumbnail_example"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/video_title"
+                    style="@style/very_small_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/video_thumbnail"
+                    app:layout_constraintTop_toTopOf="@id/video_thumbnail"
+                    tools:text="Title#1" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/margin_very_small"
+                    android:id="@+id/video_source"
+                    app:layout_constraintTop_toBottomOf="@id/video_title"
+                    app:layout_constraintStart_toStartOf="@id/video_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/source_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

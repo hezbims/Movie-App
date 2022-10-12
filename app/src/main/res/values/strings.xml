@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Final Project Sekolah Beta 1</string>
+    <string name="overview_text_label"><b>Overview</b></string>
+    <string name="lorem_ipsum_5_sentences" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Natoque penatibus et magnis dis. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Nunc mattis enim ut tellus elementum sagittis.</string>
+    <string name="video_header_text" translatable="false"><b>Video</b></string>
+    <string name="source_text">Source : %1$s</string>
+    <string name="most_popular_label">Most Popular</string>
+    <string name="image_path" translatable="false">https://image.tmdb.org/t/p/original/%1$s</string>
+    <string name="backdrop_image_description">Backdrop Image</string>
+</resources>

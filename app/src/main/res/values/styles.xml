@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="small_header">
+        <item name="android:textSize">@dimen/h2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="very_small_header">
+        <item name="android:textSize">@dimen/h3</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="roundedCorner">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+
+
+</resources>

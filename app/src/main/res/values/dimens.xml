@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h2">24sp</dimen>
+    <dimen name="h3">18sp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_large">36dp</dimen>
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_very_small">6dp</dimen>
+    <dimen name="rounded_corner">10dp</dimen>
+</resources>

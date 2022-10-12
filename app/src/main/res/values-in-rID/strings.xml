@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyek Akhir Sekolah Beta</string>
+    <string name="overview_text_label"><b>Ikhtisar</b></string>
+    <string name="source_text">Sumber : %1$s</string>
+    <string name="most_popular_label">Paling Populer</string>
+    <string name="backdrop_image_description">Gambar Latar Belakang</string>
+</resources>
