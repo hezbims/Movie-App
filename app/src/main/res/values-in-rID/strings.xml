@@ -2,7 +2,21 @@
 <resources>
     <string name="app_name">Proyek Akhir Sekolah Beta</string>
     <string name="overview_text_label"><b>Ikhtisar</b></string>
-    <string name="source_text">Sumber : %1$s</string>
     <string name="most_popular_label">Paling Populer</string>
     <string name="backdrop_image_description">Gambar Latar Belakang</string>
+    <string name="source_text">Sumber : %1$s</string>
+    <string name="register_text">Daftar</string>
+    <string name="doesnt_have_account_text">Belum punya akun? %1$s</string>
+    <string name="already_have_account_text">Sudah punya akun? %1$s</string>
+    <string name="forgot_password">Lupa password?</string>
+    <string name="create_account_failed">Gagal membuat akun : %1$s</string>
+    <string name="create_account_success">Berhasil membuat akun</string>
+    <string name="login_failed">Login gagal : %1$s</string>
+    <string name="empty_email_text">Email tidak boleh kosong</string>
+    <string name="empty_password_text">Password tidak boleh kosong</string>
+    <string name="password_not_same">Password tidak sama</string>
+    <string name="settings_text">Pengaturan</string>
+    <string name="favorite_text">Favorit</string>
+    <string name="confirm_password_label">Konfirmasi Password</string>
+    <string name="account_text">Akun</string>
 </resources>

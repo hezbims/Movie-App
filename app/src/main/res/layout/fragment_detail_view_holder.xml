@@ -47,7 +47,7 @@
                     app:layout_constraintStart_toStartOf="@id/video_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="@string/source_text" />
+                    tools:text="@string/source_video_text" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </HorizontalScrollView>

@@ -7,13 +7,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.database.Movie
-import com.example.finalprojectsekolahbeta1.databinding.MainFragmentViewHolderBinding
+import com.example.finalprojectsekolahbeta1.databinding.FragmentMainViewHolderBinding
 import com.squareup.picasso.Picasso
 
 class MainAdapter(private val eventHandler : EventHandler) : ListAdapter<Movie , MainAdapter.ViewHolder>(MainDiffUtil()){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(
-            MainFragmentViewHolderBinding
+            FragmentMainViewHolderBinding
                 .inflate(LayoutInflater.from(parent.context) , parent , false),
             eventHandler
         )
@@ -21,7 +21,7 @@ class MainAdapter(private val eventHandler : EventHandler) : ListAdapter<Movie ,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
         holder.bind(getItem(position))
 
-    class ViewHolder(private val binding : MainFragmentViewHolderBinding ,
+    class ViewHolder(private val binding : FragmentMainViewHolderBinding ,
                      private val eventHandler: EventHandler)
         : RecyclerView.ViewHolder(binding.root){
         fun bind(item : Movie){

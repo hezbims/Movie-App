@@ -34,7 +34,7 @@ class MainViewModel : ViewModel() {
 
     private fun makeCallPopularMovies(call : Call<PageInfo>){
         call.enqueue(
-            object  : Callback<PageInfo> {
+            object : Callback<PageInfo> {
                 override fun onResponse(call: Call<PageInfo>, response: Response<PageInfo>) {
                     if (response.isSuccessful)
                         _popularMovies.value = response.body()?.results

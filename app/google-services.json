@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "884516949767",
+    "project_id": "sbfinalproject-aiman-hezbi",
+    "storage_bucket": "sbfinalproject-aiman-hezbi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884516949767:android:49fac15509b26e620effa2",
+        "android_client_info": {
+          "package_name": "com.example.finalprojectsekolahbeta1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884516949767-ldcodd8reg0rf9abunsbgfg0n0uehu20.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finalprojectsekolahbeta1",
+            "certificate_hash": "105ade8cc71e1bb593fe7a30ed10016e494fab29"
+          }
+        },
+        {
+          "client_id": "884516949767-v599tfvbjbrbd72ntoahackt61468hvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzHFR_XtZvnmeYnGTDMhflWVw3BqSZG9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884516949767-v599tfvbjbrbd72ntoahackt61468hvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

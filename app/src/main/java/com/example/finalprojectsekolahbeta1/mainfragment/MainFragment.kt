@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
-import com.example.finalprojectsekolahbeta1.databinding.MainFragmentBinding
+import androidx.navigation.fragment.NavHostFragment
+import com.example.finalprojectsekolahbeta1.R
+import com.example.finalprojectsekolahbeta1.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     private lateinit var viewModel : MainViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -20,7 +22,7 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = MainFragmentBinding.inflate(layoutInflater , container , false)
+        val binding = FragmentMainBinding.inflate(layoutInflater , container , false)
 
         viewModel.popularMovies.observe(viewLifecycleOwner){ it ->
             it?.let{
@@ -34,9 +36,13 @@ class MainFragment : Fragment() {
         }
         viewModel.currentMovie.observe(viewLifecycleOwner){
             it?.let{ currentMovie ->
-                val action = MainFragmentDirections
-                    .actionMainFragmentToDetailFragment(currentMovie)
-                findNavController().navigate(action)
+                val action = MainFragmentDirections.navigateToDetail(currentMovie)
+                (requireActivity()
+                    .supportFragmentManager
+                    .findFragmentById(R.id.nav_host) as NavHostFragment).apply {
+                    navController.navigate(action)
+                }
+
                 viewModel.doneNavigatingToDetail()
             }
         }

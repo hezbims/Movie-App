@@ -7,4 +7,34 @@
     <string name="most_popular_label">Most Popular</string>
     <string name="image_path" translatable="false">https://image.tmdb.org/t/p/original/%1$s</string>
     <string name="backdrop_image_description">Backdrop Image</string>
+    <string name="video_thumbnail_url" translatable="false">https://img.youtube.com/vi/%1$s/mqdefault.jpg</string>
+
+    <!-- Ini untuk login -->
+    <string name="doesnt_have_account_text">Doesn\'t have account? %1$s</string>
+    <string name="register_text">Register</string>
+    <string name="password_label" translatable="false">Password</string>
+    <string name="email_label" translatable="false">Email</string>
+    <string name="login_text" translatable="false">Login</string>
+
+
+    <!-- Ini untuk pendaftaran -->
+    <string name="already_have_account_text">Already have account? %1$s</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="submit" translatable="false">Submit</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="create_account_failed">Failed to create account : %1$s</string>
+    <string name="create_account_success">Successfully created account</string>
+    <string name="login_failed">Login failed : %1$s</string>
+    <string name="empty_email_text">Email can not be empty</string>
+    <string name="empty_password_text">Password can not be empty</string>
+    <string name="password_not_same">Passwords are different</string>
+    <string name="filter_text" translatable="false">Filter</string>
+    <string name="home_text" translatable="false">Home</string>
+    <string name="genre_text" translatable="false">Genre</string>
+    <string name="settings_text">Settings</string>
+
+    <string name="favorite_text">Favorite</string>
+    <string name="video_text" translatable="false">Video</string>
+    <string name="account_text">Account</string>
+    <string name="logout_text" translatable="false">Logout</string>
 </resources>

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="small_header">
-        <item name="android:textSize">@dimen/h2</item>
+    <style name="header">
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="medium_header" parent="header">
+        <item name="android:textSize">@dimen/h1</item>
+    </style>
 
-    <style name="very_small_header">
+    <style name="small_header" parent="header">
+        <item name="android:textSize">@dimen/h2</item>
+    </style>
+
+    <style name="very_small_header" parent="header">
         <item name="android:textSize">@dimen/h3</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="roundedCorner">
@@ -16,5 +21,9 @@
         <item name="cornerSize">5dp</item>
     </style>
 
+    <style name="actionBarStyle"
+        parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@null</item>
+    </style>
 
 </resources>

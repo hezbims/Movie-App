@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.finalprojectsekolahbeta1.R
-import com.example.finalprojectsekolahbeta1.databinding.DetailFragmentBinding
+import com.example.finalprojectsekolahbeta1.databinding.FragmentDetailBinding
 import com.squareup.picasso.Picasso
 
 class DetailFragment : Fragment(){
@@ -27,7 +27,7 @@ class DetailFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = DetailFragmentBinding.inflate(
+        val binding = FragmentDetailBinding.inflate(
             inflater,
             container,
             false

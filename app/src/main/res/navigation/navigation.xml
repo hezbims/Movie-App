@@ -8,19 +8,24 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.finalprojectsekolahbeta1.mainfragment.MainFragment"
-        android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        android:label="Home"
+        tools:layout="@layout/fragment_main">
         <action
-            android:id="@+id/action_mainFragment_to_detailFragment"
+            android:id="@+id/navigate_to_detail"
             app:destination="@id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.finalprojectsekolahbeta1.detailfragment.DetailFragment"
-        android:label="DetailFragment"
-        tools:layout="@layout/detail_fragment">
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail">
         <argument
             android:name="currentMovie"
             app:argType="com.example.finalprojectsekolahbeta1.database.Movie" />
     </fragment>
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.example.finalprojectsekolahbeta1.genresfragment.GenresFragment"
+        android:label="Genre"
+        tools:layout="@layout/fragment_genres" />
 </navigation>
