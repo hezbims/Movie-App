@@ -1,7 +1,6 @@
 package com.example.finalprojectsekolahbeta1.mainfragment
 
 import android.app.Application
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -38,12 +37,10 @@ class MainViewModel(app: Application) : NavigateToDetail(app) {
                     }
                     else
                         _popularLoadingStatus.value = LoadingStatus.FAILURE
-                    Toast.makeText(app , "${_popularLoadingStatus.value}" , Toast.LENGTH_LONG).show()
                 }
 
                 override fun onFailure(call: Call<PageInfo>, t: Throwable) {
                     _popularLoadingStatus.value = LoadingStatus.FAILURE
-                    Toast.makeText(app , "${_popularLoadingStatus.value}" , Toast.LENGTH_LONG).show()
                 }
             }
         )
@@ -53,18 +50,54 @@ class MainViewModel(app: Application) : NavigateToDetail(app) {
     private val _topRatedMovies = MutableLiveData<List<Movie?>?>(null)
     val topRatedMovies : LiveData<List<Movie?>?>
         get() = _topRatedMovies
+    private val _topRatedLoadingStatus = MutableLiveData(LoadingStatus.LOADING)
+    val topRatedLoadingStatus : LiveData<LoadingStatus>
+        get() = _topRatedLoadingStatus
 
     init{
         api.getTopRatedMovies().enqueue(object  : Callback<PageInfo>{
             override fun onResponse(call: Call<PageInfo>, response: Response<PageInfo>) {
-                if (response.isSuccessful)
+                if (response.isSuccessful) {
+                    _topRatedLoadingStatus.value = LoadingStatus.SUCCESS
                     _topRatedMovies.value = response.body()?.results
+                }
+                else
+                    _topRatedLoadingStatus.value = LoadingStatus.FAILURE
             }
 
             override fun onFailure(call: Call<PageInfo>, t: Throwable) {
-
+                _topRatedLoadingStatus.value = LoadingStatus.FAILURE
             }
         })
+    }
+
+    val upComingMovies = LinearRecyclerViewData(api.getUpcomingMovies())
+
+    class LinearRecyclerViewData(private val call : Call<PageInfo>){
+        private val _loadingStatus = MutableLiveData(LoadingStatus.LOADING)
+        val loadingStatus : LiveData<LoadingStatus>
+            get() = _loadingStatus
+
+        private val _movies = MutableLiveData<List<Movie?>?>(null)
+        val movies : LiveData<List<Movie?>?>
+            get() = _movies
+
+        init{
+            call.enqueue(object : Callback<PageInfo>{
+                override fun onResponse(call: Call<PageInfo>, response: Response<PageInfo>) {
+                    if (response.isSuccessful){
+                        _loadingStatus.value = LoadingStatus.SUCCESS
+                        _movies.value = response.body()?.results
+                    }
+                    else
+                        _loadingStatus.value = LoadingStatus.FAILURE
+                }
+
+                override fun onFailure(call: Call<PageInfo>, t: Throwable) {
+                    _loadingStatus.value = LoadingStatus.FAILURE
+                }
+            })
+        }
     }
 }
 

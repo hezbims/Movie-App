@@ -34,6 +34,8 @@ class DetailFragment : Fragment(){
             container,
             false
         )
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
 
         viewModel.videos.observe(viewLifecycleOwner) {
             it?.let {
@@ -41,6 +43,13 @@ class DetailFragment : Fragment(){
                     submitList(it)
                 }
             }
+        }
+
+        binding.favoriteIcon.setOnClickListener {
+            if (it.tag == getString(R.string.is_favorite_tag))
+                viewModel.deleteFromFavorite()
+            else
+                viewModel.addToFavorite()
         }
 
         Picasso.get().load(getString(R.string.image_path , viewModel.currentMovie.backdropPath))

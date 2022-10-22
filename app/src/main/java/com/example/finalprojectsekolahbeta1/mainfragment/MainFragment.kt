@@ -47,6 +47,12 @@ class MainFragment : Fragment() {
             }
         }
 
+        viewModel.upComingMovies.movies.observe(viewLifecycleOwner){
+            it?.let{
+                binding.upcomingRecyclerView.adapter = adapter.apply { submitList(it) }
+            }
+        }
+
         viewModel.currentMovie.observe(viewLifecycleOwner){
             it?.let{ currentMovie ->
                 val action = MainFragmentDirections.navigateToDetail(currentMovie)

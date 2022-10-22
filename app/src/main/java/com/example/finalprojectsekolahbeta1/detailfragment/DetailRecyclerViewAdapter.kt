@@ -1,5 +1,6 @@
 package com.example.finalprojectsekolahbeta1.detailfragment
 
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -35,6 +36,13 @@ class DetailRecyclerViewAdapter : ListAdapter<Video, DetailRecyclerViewAdapter.V
                         }
                     })
                 videoTitle.text = item.name
+
+                videoThumbnail.setOnClickListener {
+                    it.context.startActivity(
+                        Intent(Intent.ACTION_VIEW)
+                            .setData(Uri.parse("https://www.youtube.com/watch?v=${item.key}"))
+                    )
+                }
             }
 
         }

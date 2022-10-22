@@ -16,6 +16,9 @@ interface API {
     @GET("movie/top_rated?api_key=$apiKey")
     fun getTopRatedMovies() : Call<PageInfo>
 
+    @GET("movie/upcoming?api_key=$apiKey")
+    fun getUpcomingMovies() : Call<PageInfo>
+
     @GET("movie/{movie_id}/videos?api_key=$apiKey&language=en-US")
     fun getVideosFromMovie(@Path("movie_id")id : Int) : Call<VideoResult>
 
@@ -24,6 +27,7 @@ interface API {
 
     @GET("discover/movie?api_key=$apiKey")
     fun getMoviesByGenre(@Query("with_genres")id : Int) : Call<PageInfo>
+
 }
 
 val retrofit: Retrofit = Retrofit.Builder()

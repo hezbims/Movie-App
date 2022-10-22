@@ -14,7 +14,7 @@
     <string name="register_text">Register</string>
     <string name="password_label" translatable="false">Password</string>
     <string name="email_label" translatable="false">Email</string>
-    <string name="login_text" translatable="false">Login</string>
+    <string name="login_text">Login</string>
 
 
     <!-- Ini untuk pendaftaran -->
@@ -36,8 +36,13 @@
     <string name="favorite_text">Favorite</string>
     <string name="video_text" translatable="false">Video</string>
     <string name="account_text">Account</string>
-    <string name="logout_text" translatable="false">Logout</string>
+    <string name="logout_text">Logout</string>
 
     <string name="movie_by_genre_action_bar_title" translatable="false">Genre : %1$s</string>
     <string name="top_rated_text">Top Rated</string>
+
+    <string name="rating_format" translatable="false">: %.1f</string>
+    <string name="is_favorite_tag" translatable="false">is_favorite</string>
+    <string name="not_favorite_tag" translatable="false">not_favorite</string>
+    <string name="upcoming_text">Upcoming</string>
 </resources>

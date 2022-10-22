@@ -2,6 +2,7 @@ package com.example.finalprojectsekolahbeta1.moviesbygenre
 
 import android.app.Application
 import androidx.lifecycle.*
+import com.example.finalprojectsekolahbeta1.LoadingStatus
 import com.example.finalprojectsekolahbeta1.database.Genre
 import com.example.finalprojectsekolahbeta1.database.Movie
 import com.example.finalprojectsekolahbeta1.database.PageInfo
@@ -18,6 +19,9 @@ class MoviesByGenreViewModel(val genre : Genre , app: Application)
     private val _moviesList = MutableLiveData<List<Movie?>?>(null)
     val moviesList : LiveData<List<Movie?>?>
         get() = _moviesList
+    private val _loadingStatus = MutableLiveData(LoadingStatus.LOADING)
+    val loadingStatus : LiveData<LoadingStatus>
+        get() = _loadingStatus
 
     init{
         makeCallMovieList()
@@ -26,12 +30,16 @@ class MoviesByGenreViewModel(val genre : Genre , app: Application)
     private fun makeCallMovieList(){
         api.getMoviesByGenre(genre.id!!).enqueue(object : Callback<PageInfo>{
             override fun onResponse(call: Call<PageInfo>, response: Response<PageInfo>) {
-                if (response.isSuccessful)
+                if (response.isSuccessful) {
+                    _loadingStatus.value = LoadingStatus.SUCCESS
                     _moviesList.value = response.body()?.results
+                }
+                else
+                    _loadingStatus.value = LoadingStatus.FAILURE
             }
 
             override fun onFailure(call: Call<PageInfo>, t: Throwable) {
-                TODO("Not yet implemented")
+                _loadingStatus.value = LoadingStatus.FAILURE
             }
         })
     }

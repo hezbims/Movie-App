@@ -33,6 +33,8 @@ class MoviesByGenreFragment : Fragment() {
     ): View {
         binding = FragmentMoviesByGenreBinding
             .inflate(layoutInflater , container , false)
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
 
         viewModel.moviesList.observe(viewLifecycleOwner){
             it?.let {

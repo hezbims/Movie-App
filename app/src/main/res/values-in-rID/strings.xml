@@ -11,7 +11,7 @@
     <string name="forgot_password">Lupa password?</string>
     <string name="create_account_failed">Gagal membuat akun : %1$s</string>
     <string name="create_account_success">Berhasil membuat akun</string>
-    <string name="login_failed">Login gagal : %1$s</string>
+    <string name="login_failed">Gagal masuk : %1$s</string>
     <string name="empty_email_text">Email tidak boleh kosong</string>
     <string name="empty_password_text">Password tidak boleh kosong</string>
     <string name="password_not_same">Password tidak sama</string>
@@ -20,4 +20,7 @@
     <string name="confirm_password_label">Konfirmasi Password</string>
     <string name="account_text">Akun</string>
     <string name="top_rated_text">Rating Tertinggi</string>
+    <string name="login_text">Masuk</string>
+    <string name="logout_text">Keluar</string>
+    <string name="upcoming_text">Mendatang</string>
 </resources>
