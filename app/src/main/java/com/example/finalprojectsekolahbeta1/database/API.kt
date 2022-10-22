@@ -11,7 +11,7 @@ const val apiKey = "39ae7628fbc44ad94d717632437d96a0"
 
 interface API {
     @GET("movie/popular?api_key=$apiKey")
-    fun getLatestMovies() : Call<PageInfo>
+    fun getPopularMovies() : Call<PageInfo>
 
     @GET("movie/top_rated?api_key=$apiKey")
     fun getTopRatedMovies() : Call<PageInfo>

@@ -15,62 +15,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainViewModel(app: Application) : NavigateToDetail(app) {
-    private val _popularMovies = MutableLiveData<List<Movie?>?>(null)
-    val  popularMovies : LiveData<List<Movie?>?>
-        get() = _popularMovies
-
-    private val _popularLoadingStatus = MutableLiveData(LoadingStatus.LOADING)
-    val popularLoadingStatus : LiveData<LoadingStatus>
-        get() = _popularLoadingStatus
-
-    init{
-        api.getLatestMovies().enqueue(
-            object : Callback<PageInfo> {
-                override fun onResponse(call: Call<PageInfo>, response: Response<PageInfo>) {
-                    if (response.isSuccessful) {
-                        _popularMovies.value = response.body()?.results
-                        _popularLoadingStatus.value =
-                            if (_popularMovies.value?.isNotEmpty() == true)
-                                LoadingStatus.SUCCESS
-                            else
-                                LoadingStatus.NORESULT
-                    }
-                    else
-                        _popularLoadingStatus.value = LoadingStatus.FAILURE
-                }
-
-                override fun onFailure(call: Call<PageInfo>, t: Throwable) {
-                    _popularLoadingStatus.value = LoadingStatus.FAILURE
-                }
-            }
-        )
-    }
-
-
-    private val _topRatedMovies = MutableLiveData<List<Movie?>?>(null)
-    val topRatedMovies : LiveData<List<Movie?>?>
-        get() = _topRatedMovies
-    private val _topRatedLoadingStatus = MutableLiveData(LoadingStatus.LOADING)
-    val topRatedLoadingStatus : LiveData<LoadingStatus>
-        get() = _topRatedLoadingStatus
-
-    init{
-        api.getTopRatedMovies().enqueue(object  : Callback<PageInfo>{
-            override fun onResponse(call: Call<PageInfo>, response: Response<PageInfo>) {
-                if (response.isSuccessful) {
-                    _topRatedLoadingStatus.value = LoadingStatus.SUCCESS
-                    _topRatedMovies.value = response.body()?.results
-                }
-                else
-                    _topRatedLoadingStatus.value = LoadingStatus.FAILURE
-            }
-
-            override fun onFailure(call: Call<PageInfo>, t: Throwable) {
-                _topRatedLoadingStatus.value = LoadingStatus.FAILURE
-            }
-        })
-    }
-
+    val popularMovies = LinearRecyclerViewData(api.getPopularMovies())
+    val topRatedMovies = LinearRecyclerViewData(api.getTopRatedMovies())
     val upComingMovies = LinearRecyclerViewData(api.getUpcomingMovies())
 
     class LinearRecyclerViewData(private val call : Call<PageInfo>){

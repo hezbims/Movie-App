@@ -41,7 +41,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                loadingImage="@{viewModel.popularLoadingStatus}"
+                loadingImage="@{viewModel.popularMovies.loadingStatus}"
                 style="@style/mediumLoadingViewStyle"
                 app:layout_constraintStart_toStartOf="@id/most_popular_recycler_view"
                 app:layout_constraintEnd_toEndOf="@id/most_popular_recycler_view"
@@ -74,7 +74,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                loadingImage="@{viewModel.topRatedLoadingStatus}"
+                loadingImage="@{viewModel.topRatedMovies.loadingStatus}"
                 style="@style/mediumLoadingViewStyle"
                 app:layout_constraintStart_toStartOf="@id/top_rated_recycler_view"
                 app:layout_constraintEnd_toEndOf="@id/top_rated_recycler_view"

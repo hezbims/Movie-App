@@ -35,13 +35,13 @@ class MainFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
 
-        viewModel.popularMovies.observe(viewLifecycleOwner){
+        viewModel.popularMovies.movies.observe(viewLifecycleOwner){
             it?.let{
                 binding.mostPopularRecyclerView.adapter = adapter.apply { submitList(it) }
             }
         }
 
-        viewModel.topRatedMovies.observe(viewLifecycleOwner){
+        viewModel.popularMovies.movies.observe(viewLifecycleOwner){
             it?.let{
                 binding.topRatedRecyclerView.adapter = adapter.apply { submitList(it) }
             }
