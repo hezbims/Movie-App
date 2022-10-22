@@ -6,7 +6,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalprojectsekolahbeta1.database.Movie
-import com.example.finalprojectsekolahbeta1.detailfragment.NavigateEventHandler
+import com.example.finalprojectsekolahbeta1.detailfragment.NavigateToDetailEventHandler
 
 
 @BindingAdapter("loadingImage")
@@ -21,7 +21,7 @@ fun setLoadingImage(view : AppCompatImageView , status: LoadingStatus?){
 }
 
 @BindingAdapter(value = ["movies", "event"] , requireAll = true)
-fun setLinearRecyclerViewData(view : RecyclerView , movies : List<Movie?>? , event : NavigateEventHandler?){
+fun setLinearRecyclerViewData(view : RecyclerView , movies : List<Movie?>? , event : NavigateToDetailEventHandler?){
 
 }
 

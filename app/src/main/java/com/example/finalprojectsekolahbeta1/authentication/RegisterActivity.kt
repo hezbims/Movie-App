@@ -61,14 +61,14 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
-        if (password.isEmpty() || cPassword.isEmpty()){
+        else if (password.isEmpty() || cPassword.isEmpty()){
             Toast.makeText(
                 this,
                 getString(R.string.empty_password_text),
                 Toast.LENGTH_SHORT
             ).show()
         }
-        if (password == cPassword){
+        else if (password == cPassword){
             Firebase.auth.createUserWithEmailAndPassword(
                 email, password
             ).addOnCompleteListener {task ->

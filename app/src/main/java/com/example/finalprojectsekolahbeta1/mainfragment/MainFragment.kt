@@ -9,13 +9,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.databinding.FragmentMainBinding
-import com.example.finalprojectsekolahbeta1.detailfragment.NavigateEventHandler
+import com.example.finalprojectsekolahbeta1.detailfragment.NavigateToDetailEventHandler
 
 class MainFragment : Fragment() {
     private lateinit var viewModel : MainViewModel
     private val adapter: MainMoviePosterAdapter
         get() = MainMoviePosterAdapter(
-            NavigateEventHandler(
+            NavigateToDetailEventHandler(
                 viewModel::navigateToDetail
             )
         )

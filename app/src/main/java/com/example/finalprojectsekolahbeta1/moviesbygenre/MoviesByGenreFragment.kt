@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.finalprojectsekolahbeta1.MainActivity
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.databinding.FragmentMoviesByGenreBinding
+import com.example.finalprojectsekolahbeta1.detailfragment.NavigateToDetailEventHandler
 
 class MoviesByGenreFragment : Fragment() {
     private lateinit var viewModel: MoviesByGenreViewModel
@@ -39,7 +40,7 @@ class MoviesByGenreFragment : Fragment() {
         viewModel.moviesList.observe(viewLifecycleOwner){
             it?.let {
                 binding.recyclerView.adapter = GridMoviePosterAdapter(
-                    GridMoviePosterAdapter.GridMovieNavigateEventHandler(
+                    NavigateToDetailEventHandler(
                         viewModel::navigateToDetail
                     )
                 ).apply { submitList(it) }
