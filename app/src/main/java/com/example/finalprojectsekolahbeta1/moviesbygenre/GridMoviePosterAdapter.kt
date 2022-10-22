@@ -38,7 +38,7 @@ class GridMoviePosterAdapter(
                 ).build()
 
                 Picasso.get()
-                    .load(binding.root.context.getString(R.string.image_path, item.posterPath))
+                    .load(binding.root.context.getString(R.string.poster_url, item.posterPath))
                     .into(this , object : Callback{
                         override fun onSuccess() {
                             binding.progressBar.visibility = View.GONE

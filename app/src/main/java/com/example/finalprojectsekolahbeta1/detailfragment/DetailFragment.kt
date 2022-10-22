@@ -52,7 +52,7 @@ class DetailFragment : Fragment(){
                 viewModel.addToFavorite()
         }
 
-        Picasso.get().load(getString(R.string.image_path , viewModel.currentMovie.backdropPath))
+        Picasso.get().load(getString(R.string.poster_url , viewModel.currentMovie.backdropPath))
             .into(binding.thumbnail , object : Callback{
                 override fun onSuccess() {
                     binding.progressBar.visibility = View.GONE

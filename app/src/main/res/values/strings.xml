@@ -5,7 +5,7 @@
     <string name="video_header_text" translatable="false"><b>Video</b></string>
     <string name="source_text">Source : %1$s</string>
     <string name="most_popular_label">Most Popular</string>
-    <string name="image_path" translatable="false">https://image.tmdb.org/t/p/original/%1$s</string>
+    <string name="poster_url" translatable="false">https://image.tmdb.org/t/p/original/%1$s</string>
     <string name="backdrop_image_description">Backdrop Image</string>
     <string name="video_thumbnail_url" translatable="false">https://img.youtube.com/vi/%1$s/mqdefault.jpg</string>
 
@@ -45,4 +45,5 @@
     <string name="is_favorite_tag" translatable="false">is_favorite</string>
     <string name="not_favorite_tag" translatable="false">not_favorite</string>
     <string name="upcoming_text">Upcoming</string>
+    <string name="release_date_format">Release date : %1$s</string>
 </resources>

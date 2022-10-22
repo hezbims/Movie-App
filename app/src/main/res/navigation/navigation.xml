@@ -44,4 +44,9 @@
             android:name="genre"
             app:argType="com.example.finalprojectsekolahbeta1.database.Genre" />
     </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.finalprojectsekolahbeta1.favoritefragment.FavoriteFragment"
+        android:label="@string/favorite_text"
+        tools:layout="@layout/fragment_favorite" />
 </navigation>

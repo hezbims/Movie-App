@@ -4,10 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="@dimen/margin_medium">
+    android:layout_marginVertical="@dimen/margin_medium"
+    android:layout_marginHorizontal="@dimen/margin_small">
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/outer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_small">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/movie_poster"
@@ -18,14 +21,32 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/morbius"/>
 
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/smallLoadingViewStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/movie_poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/internet_fail"
+            style="@style/smallLoadingViewStyle"
+            android:src="@drawable/ic_baseline_no_internet"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/movie_poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/title"
             style="@style/small_header"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginHorizontal="@dimen/margin_medium"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:ellipsize="end"
             app:layout_constraintStart_toEndOf="@id/movie_poster"
             app:layout_constraintTop_toTopOf="@id/movie_poster"
             tools:text="Superman" />
@@ -38,9 +59,10 @@
             android:src="@drawable/ic_baseline_black_star"
             android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintStart_toEndOf="@id/movie_poster"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
+            android:id="@+id/rating_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/star_icon"
@@ -48,5 +70,33 @@
             app:layout_constraintTop_toTopOf="@id/star_icon"
             tools:text=": 4.6"
             android:layout_marginStart="@dimen/margin_very_small"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/trending_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_popularity"
+            app:layout_constraintTop_toBottomOf="@id/star_icon"
+            app:layout_constraintStart_toStartOf="@id/star_icon"
+            android:layout_marginTop="@dimen/margin_small"/>
+        <TextView
+            android:id="@+id/trending_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/trending_icon"
+            app:layout_constraintTop_toTopOf="@id/trending_icon"
+            app:layout_constraintBottom_toBottomOf="@id/trending_icon"
+            android:layout_marginStart="@dimen/margin_very_small"
+            tools:text=": 100.6"
+            />
+
+        <TextView
+            android:id="@+id/release_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/trending_icon"
+            app:layout_constraintTop_toBottomOf="@id/trending_icon"
+            android:layout_marginTop="24dp"
+            tools:text="Release data : 2016"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

@@ -22,9 +22,8 @@ interface MovieFavoriteDao {
     fun getMovieId(id : Int) : LiveData<Int?>
 
     @Query("""
-       SELECT id
-       FROM favorite_movies
-       where id = :id
+        SELECT *
+        FROM favorite_movies
     """)
-    suspend fun sgetMovieId(id : Int) : Int?
+    fun getAllFavoriteMovies() : LiveData<List<MovieFavorite>>
 }

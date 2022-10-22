@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when(menuItem.itemId){
                 R.id.logout -> Firebase.auth.signOut()
+                R.id.favorite -> navController.navigate(R.id.favoriteFragment)
             }
             true
         }

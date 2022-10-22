@@ -23,4 +23,5 @@
     <string name="login_text">Masuk</string>
     <string name="logout_text">Keluar</string>
     <string name="upcoming_text">Mendatang</string>
+    <string name="release_date_format">Tanggal rilis : %1$s</string>
 </resources>

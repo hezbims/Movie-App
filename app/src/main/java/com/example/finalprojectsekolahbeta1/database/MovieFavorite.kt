@@ -17,11 +17,14 @@ data class MovieFavorite(
     @field:SerializedName("poster_path")
     val posterPath: String? = null,
 
-    @field:SerializedName("vote_count")
-    val voteCount: Int? = null,
+    @field:SerializedName("release_date")
+    val releaseDate: String? = null,
 
     @field:SerializedName("vote_average")
-    val voteAverage: Double? = null
+    val voteAverage: Double? = null,
+
+    @field:SerializedName("popularity")
+    val popularity: Double? = null
 ){
     companion object{
         class MovieFavoriteDiffUtil : DiffUtil.ItemCallback<MovieFavorite>(){

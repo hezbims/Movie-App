@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [MovieFavorite::class] , exportSchema = true , version = 1)
+@Database(entities = [MovieFavorite::class] , exportSchema = true , version = 2)
 abstract class MovieFavoriteDatabase : RoomDatabase() {
     abstract val dao : MovieFavoriteDao
 

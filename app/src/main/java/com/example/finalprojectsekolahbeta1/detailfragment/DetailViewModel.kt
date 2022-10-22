@@ -51,8 +51,9 @@ class DetailViewModel(
                 id = id!!,
                 title = title,
                 posterPath = posterPath,
-                voteCount = voteCount,
-                voteAverage = voteAverage
+                releaseDate = releaseDate,
+                voteAverage = voteAverage,
+                popularity = popularity
             )
         }
 
