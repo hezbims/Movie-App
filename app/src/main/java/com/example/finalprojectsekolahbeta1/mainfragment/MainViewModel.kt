@@ -19,7 +19,7 @@ class MainViewModel(app: Application) : NavigateToDetail(app) {
     val topRatedMovies = LinearRecyclerViewData(api.getTopRatedMovies())
     val upComingMovies = LinearRecyclerViewData(api.getUpcomingMovies())
 
-    class LinearRecyclerViewData(private val call : Call<PageInfo>){
+    class LinearRecyclerViewData(call : Call<PageInfo>){
         private val _loadingStatus = MutableLiveData(LoadingStatus.LOADING)
         val loadingStatus : LiveData<LoadingStatus>
             get() = _loadingStatus

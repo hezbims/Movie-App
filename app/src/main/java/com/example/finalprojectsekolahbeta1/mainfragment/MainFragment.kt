@@ -9,12 +9,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.databinding.FragmentMainBinding
+import com.example.finalprojectsekolahbeta1.detailfragment.NavigateEventHandler
 
 class MainFragment : Fragment() {
     private lateinit var viewModel : MainViewModel
     private val adapter: MainMoviePosterAdapter
         get() = MainMoviePosterAdapter(
-            MainMoviePosterAdapter.MovieNavigateEventHandler(
+            NavigateEventHandler(
                 viewModel::navigateToDetail
             )
         )
@@ -41,7 +42,7 @@ class MainFragment : Fragment() {
             }
         }
 
-        viewModel.popularMovies.movies.observe(viewLifecycleOwner){
+        viewModel.topRatedMovies.movies.observe(viewLifecycleOwner){
             it?.let{
                 binding.topRatedRecyclerView.adapter = adapter.apply { submitList(it) }
             }

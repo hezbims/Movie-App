@@ -8,12 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.database.Movie
 import com.example.finalprojectsekolahbeta1.databinding.ViewHolderMoviePosterBinding
+import com.example.finalprojectsekolahbeta1.detailfragment.NavigateEventHandler
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import java.lang.Exception
 
 class MainMoviePosterAdapter(
-    private val eventHandler : MovieNavigateEventHandler,
+    private val eventHandler : NavigateEventHandler,
 ) : ListAdapter<Movie, MainMoviePosterAdapter.MoviePosterViewHolder>(
     Movie.Companion.MovieDiffUtil()
 ){
@@ -27,7 +28,7 @@ class MainMoviePosterAdapter(
     override fun onBindViewHolder(holder: MoviePosterViewHolder, position: Int) =
         holder.bind(getItem(position))
     class MoviePosterViewHolder(private val binding : ViewHolderMoviePosterBinding,
-                                private val eventHandler: MovieNavigateEventHandler,
+                                private val eventHandler: NavigateEventHandler,
     ) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(item : Movie){
@@ -55,6 +56,4 @@ class MainMoviePosterAdapter(
             }
         }
     }
-
-    class MovieNavigateEventHandler(val navigate : (movie : Movie) -> Unit)
 }
