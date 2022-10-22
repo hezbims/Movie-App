@@ -27,6 +27,24 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@style/smallLoadingViewStyle"
+                    app:layout_constraintBottom_toBottomOf="@id/video_thumbnail"
+                    app:layout_constraintTop_toTopOf="@id/video_thumbnail"
+                    app:layout_constraintStart_toStartOf="@id/video_thumbnail"
+                    app:layout_constraintEnd_toEndOf="@id/video_thumbnail"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/internet_fail"
+                    style="@style/smallLoadingViewStyle"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_baseline_no_internet"
+                    app:layout_constraintBottom_toBottomOf="@id/video_thumbnail"
+                    app:layout_constraintTop_toTopOf="@id/video_thumbnail"
+                    app:layout_constraintStart_toStartOf="@id/video_thumbnail"
+                    app:layout_constraintEnd_toEndOf="@id/video_thumbnail"/>
+
                 <TextView
                     android:id="@+id/video_title"
                     style="@style/very_small_header"
@@ -47,7 +65,7 @@
                     app:layout_constraintStart_toStartOf="@id/video_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="@string/source_video_text" />
+                    tools:text="Source : Youtube" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </HorizontalScrollView>

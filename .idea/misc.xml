@@ -3,18 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/drawable/ic_baseline_access_time.xml" value="0.113" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/drawable/ic_baseline_cloud_off.xml" value="0.113" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/bilal.xml" value="0.1171875" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/detail_fragment.xml" value="0.2" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/detail_fragment_view_holder.xml" value="0.2" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/detail_list_item.xml" value="0.176" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/fragment_detail.xml" value="0.1203125" />
-        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/fragment_genres.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/fragment_genres.xml" value="0.136" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/fragment_genres_view_holder.xml" value="0.136" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/fragment_main.xml" value="0.1171875" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/fragment_main_settings.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/fragment_movies_by_genre.xml" value="0.10260416666666666" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/main_fragment.xml" value="0.176" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/main_fragment_view_holder.xml" value="0.12" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/main_toolbar.xml" value="0.10572916666666667" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/view_holder_detail.xml" value="0.4" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/view_holder_genres.xml" value="0.10260416666666666" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/view_holder_medium_movie_poster.xml" value="0.264" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/view_holder_movie_poster.xml" value="0.1171875" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/view_holder_movie_poster_grid.xml" value="0.10260416666666666" />
+        <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/layout/view_holder_small_movie_poster.xml" value="0.264" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/menu/drawer_menu.xml" value="0.176" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/menu/main_menu.xml" value="0.1" />
         <entry key="..\:/Users/hezbi/AndroidStudioProjects/FinalProjectSekolahBeta1/app/src/main/res/xml/root_preferences.xml" value="0.1140625" />

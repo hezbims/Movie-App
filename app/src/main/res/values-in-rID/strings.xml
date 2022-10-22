@@ -19,4 +19,5 @@
     <string name="favorite_text">Favorit</string>
     <string name="confirm_password_label">Konfirmasi Password</string>
     <string name="account_text">Akun</string>
+    <string name="top_rated_text">Rating Tertinggi</string>
 </resources>

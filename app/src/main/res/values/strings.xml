@@ -37,4 +37,7 @@
     <string name="video_text" translatable="false">Video</string>
     <string name="account_text">Account</string>
     <string name="logout_text" translatable="false">Logout</string>
+
+    <string name="movie_by_genre_action_bar_title" translatable="false">Genre : %1$s</string>
+    <string name="top_rated_text">Top Rated</string>
 </resources>

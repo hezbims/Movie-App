@@ -12,10 +12,19 @@ import com.example.finalprojectsekolahbeta1.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     private lateinit var viewModel : MainViewModel
+    private val adapter: MainMoviePosterAdapter
+        get() = MainMoviePosterAdapter(
+            MainMoviePosterAdapter.MovieNavigateEventHandler(
+                viewModel::navigateToDetail
+            )
+        )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[MainViewModel::class.java]
     }
 
     override fun onCreateView(
@@ -23,17 +32,21 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentMainBinding.inflate(layoutInflater , container , false)
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
 
-        viewModel.popularMovies.observe(viewLifecycleOwner){ it ->
+        viewModel.popularMovies.observe(viewLifecycleOwner){
             it?.let{
-                binding.mostPopularRecyclerView.adapter = MainAdapter(EventHandler { currentMovie ->
-                    viewModel.navigateToDetail(currentMovie)
-
-                }).apply {
-                    submitList(it)
-                }
+                binding.mostPopularRecyclerView.adapter = adapter.apply { submitList(it) }
             }
         }
+
+        viewModel.topRatedMovies.observe(viewLifecycleOwner){
+            it?.let{
+                binding.topRatedRecyclerView.adapter = adapter.apply { submitList(it) }
+            }
+        }
+
         viewModel.currentMovie.observe(viewLifecycleOwner){
             it?.let{ currentMovie ->
                 val action = MainFragmentDirections.navigateToDetail(currentMovie)

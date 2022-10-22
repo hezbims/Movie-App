@@ -11,7 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.finalprojectsekolahbeta1.databinding.ActivityMainBinding
-import com.example.finalprojectsekolahbeta1.login.LoginActivity
+import com.example.finalprojectsekolahbeta1.authentication.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

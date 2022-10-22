@@ -1,4 +1,4 @@
-package com.example.finalprojectsekolahbeta1.register
+package com.example.finalprojectsekolahbeta1.authentication
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.databinding.ActivityRegisterBinding
-import com.example.finalprojectsekolahbeta1.login.LoginActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/genre_text_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:text="Horror"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:layout_marginVertical="@dimen/margin_medium"
+    android:layout_gravity="center" />

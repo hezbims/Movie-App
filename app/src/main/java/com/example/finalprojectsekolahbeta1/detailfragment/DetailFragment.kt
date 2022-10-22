@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.databinding.FragmentDetailBinding
+import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
+import java.lang.Exception
 
 class DetailFragment : Fragment(){
     private lateinit var viewModel : DetailViewModel
@@ -42,7 +44,16 @@ class DetailFragment : Fragment(){
         }
 
         Picasso.get().load(getString(R.string.image_path , viewModel.currentMovie.backdropPath))
-            .into(binding.thumbnail)
+            .into(binding.thumbnail , object : Callback{
+                override fun onSuccess() {
+                    binding.progressBar.visibility = View.GONE
+                }
+
+                override fun onError(e: Exception?) {
+                    binding.progressBar.visibility = View.GONE
+                    binding.internetFail.visibility = View.VISIBLE
+                }
+            })
 
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel

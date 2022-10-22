@@ -1,6 +1,7 @@
 package com.example.finalprojectsekolahbeta1.database
 
 import android.os.Parcelable
+import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
@@ -48,4 +49,15 @@ data class Movie(
 
 	@field:SerializedName("vote_count")
 	val voteCount: Int? = null
-) : Parcelable
+) : Parcelable{
+	companion object{
+
+		class MovieDiffUtil : DiffUtil.ItemCallback<Movie>(){
+			override fun areItemsTheSame(oldItem: Movie, newItem: Movie) =
+				oldItem.id == newItem.id
+
+			override fun areContentsTheSame(oldItem: Movie, newItem: Movie) =
+				oldItem == newItem
+		}
+	}
+}

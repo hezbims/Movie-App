@@ -1,4 +1,4 @@
-package com.example.finalprojectsekolahbeta1.login
+package com.example.finalprojectsekolahbeta1.authentication
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.finalprojectsekolahbeta1.MainActivity
 import com.example.finalprojectsekolahbeta1.R
 import com.example.finalprojectsekolahbeta1.databinding.ActivityLoginBinding
-import com.example.finalprojectsekolahbeta1.register.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

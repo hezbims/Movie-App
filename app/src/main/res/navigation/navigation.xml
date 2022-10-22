@@ -27,5 +27,21 @@
         android:id="@+id/genresFragment"
         android:name="com.example.finalprojectsekolahbeta1.genresfragment.GenresFragment"
         android:label="Genre"
-        tools:layout="@layout/fragment_genres" />
+        tools:layout="@layout/fragment_genres" >
+        <action
+            android:id="@+id/action_genresFragment_to_moviesByGenreFragment"
+            app:destination="@id/moviesByGenreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviesByGenreFragment"
+        android:name="com.example.finalprojectsekolahbeta1.moviesbygenre.MoviesByGenreFragment"
+        android:label="fragment_movies_by_genre"
+        tools:layout="@layout/fragment_movies_by_genre" >
+        <action
+            android:id="@+id/action_moviesByGenreFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="genre"
+            app:argType="com.example.finalprojectsekolahbeta1.database.Genre" />
+    </fragment>
 </navigation>

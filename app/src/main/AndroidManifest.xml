@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjectSekolahBeta1">
         <activity
-            android:name=".register.RegisterActivity"
+            android:name=".authentication.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".authentication.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

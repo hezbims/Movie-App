@@ -5,23 +5,24 @@ import androidx.lifecycle.*
 import com.example.finalprojectsekolahbeta1.database.Movie
 import com.example.finalprojectsekolahbeta1.database.Video
 import com.example.finalprojectsekolahbeta1.database.VideoResult
-import com.example.finalprojectsekolahbeta1.database.movieApi
+import com.example.finalprojectsekolahbeta1.database.api
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class DetailViewModel(val currentMovie : Movie,
-                      private val app : Application
-                      ) : AndroidViewModel(app){
+class DetailViewModel(
+    val currentMovie : Movie,
+    private val app : Application
+    ) : AndroidViewModel(app){
     private val _videos = MutableLiveData<List<Video?>?>(null)
     val videos : LiveData<List<Video?>?>
         get() = _videos
     init{
-        makeCallVideos(movieApi.getVideoFromMovie(currentMovie.id!!))
+        makeCallVideos()
     }
 
-    private fun makeCallVideos(call : Call<VideoResult>){
-        call.enqueue(object : Callback<VideoResult>{
+    private fun makeCallVideos(){
+        api.getVideosFromMovie(currentMovie.id!!).enqueue(object : Callback<VideoResult>{
             override fun onResponse(call: Call<VideoResult>, response: Response<VideoResult>) {
                 if (response.isSuccessful)
                     _videos.value = response.body()?.results
